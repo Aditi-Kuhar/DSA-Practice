@@ -43,7 +43,7 @@ console.log(largest(arr2));
 // Write a function that returns the smallest number in an array
 
 function smallest(array) {
-  let smlNo = array[0];
+  let smlNo = Infinity;
   for (let i = 1; i < array.length; i++) {
     if (array[i] < smlNo) {
       smlNo = array[i];
