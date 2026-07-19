@@ -22,3 +22,5 @@ var deleteDuplicates = function(head) {
     }
      return head;
 };
+
+//revised till here!
