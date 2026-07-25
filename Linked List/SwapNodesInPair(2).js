@@ -23,3 +23,5 @@ var swapPairs = function(head)
     return r;
     
 };
+
+//recursive approach
