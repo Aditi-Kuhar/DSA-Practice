@@ -3,18 +3,19 @@
  * @param {number} k
  * @return {string}
  */
-var reverseStr = function(s) {
+var reverseStr = function (s, k) {
     s = s.split("");
 
     let n = s.length;
+    for (let x = 0; x < n; x = x + (2 * k)) {
+        let n = Math.min(k, s.length - x);
+        let mid = Math.floor(n / 2);
 
-    for (let i = 0; i < Math.floor(n / 2); i++) {
-        let temp = s[i];
-        s[i] = s[n - 1 - i];
-        s[n - 1 - i] = temp;
+        for (let i = 0; i < mid; i++) {
+            let temp = s[x + i];
+            s[i + x] = s[x + n - 1 - i];
+            s[x + n - 1 - i] = temp;
+        }
     }
-
     return s.join("");
 };
-
-//merse nhi hua khudh
